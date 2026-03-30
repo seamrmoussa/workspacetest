@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Book Your Sanctuary | Architectural Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#eef1f3",
+                        "on-primary-container": "#a2c6fd",
+                        "error": "#ba1a1a",
+                        "background": "#f7fafc",
+                        "tertiary-fixed": "#ffdead",
+                        "error-container": "#ffdad6",
+                        "primary": "#0e3b69",
+                        "on-surface-variant": "#43474f",
+                        "tertiary": "#4f3500",
+                        "surface": "#f7fafc",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "on-background": "#181c1e",
+                        "on-tertiary-fixed": "#281900",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "outline": "#737780",
+                        "surface-dim": "#d7dadc",
+                        "secondary-container": "#e1e1c9",
+                        "primary-fixed": "#d4e3ff",
+                        "surface-bright": "#f7fafc",
+                        "outline-variant": "#c3c6d0",
+                        "primary-container": "#2c5282",
+                        "on-secondary-container": "#636451",
+                        "primary-fixed-dim": "#a5c8ff",
+                        "on-primary-fixed-variant": "#204877",
+                        "surface-container": "#ebeef0",
+                        "surface-container-low": "#f1f4f6",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "surface-tint": "#3b6090",
+                        "tertiary-container": "#6d4a00",
+                        "on-surface": "#181c1e",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-fixed": "#1b1d0e",
+                        "tertiary-fixed-dim": "#f0be6e",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#edbc6c",
+                        "secondary-fixed-dim": "#c8c8b0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#474836",
+                        "surface-container-high": "#e5e9eb",
+                        "secondary-fixed": "#e4e4cc",
+                        "inverse-primary": "#a5c8ff",
+                        "secondary": "#5e604d",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#001c3a"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center h-16 px-8 max-w-full mx-auto">
+<a class="text-xl font-bold tracking-tight text-blue-900 dark:text-blue-100 font-headline" href="home_page.html">Architectural Sanctuary</a>
+<div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-300 transition-colors" href="./home_page.html">Explore</a>
+<a class="text-blue-900 dark:text-blue-400 border-b-2 border-blue-900 dark:border-blue-400 pb-1" href="./booking_page.html">Bookings</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-300 transition-colors" href="./plans_pricing.html">Plans</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-300 transition-colors" href="#">Help</a>
+</div>
+<div class="flex items-center space-x-4">
+<a class="material-symbols-outlined p-2 text-slate-600 hover:bg-slate-200/50 rounded-full transition-colors" href="./notifications_system.html">notifications</a>
+<a class="material-symbols-outlined p-2 text-slate-600 hover:bg-slate-200/50 rounded-full transition-colors" href="./authentication.html">account_circle</a>
+<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-lg text-sm font-bold scale-95 active:scale-90 transition-transform inline-block" href="./booking_page.html">Book Now</a>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+<!-- Booking Stepper Header -->
+<header class="mb-12">
+<h1 class="text-4xl md:text-5xl font-extrabold font-headline tracking-tight text-primary mb-4">Reserve Your Space</h1>
+<p class="text-secondary max-w-2xl text-lg">Experience a workspace designed for focus, clarity, and architectural inspiration. Follow the steps below to secure your sanctuary.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Booking Flow -->
+<div class="lg:col-span-8 space-y-16">
+<!-- Step 1: Date & Time -->
+<section id="step-datetime">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">1</span>
+<h2 class="text-2xl font-bold font-headline">Select Date &amp; Time</h2>
+</div>
+<div class="bg-surface-container-low rounded-xl p-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Calendar Placeholder (Visual Only) -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<span class="font-bold font-headline">October 2024</span>
+<div class="flex gap-2">
+<button class="material-symbols-outlined text-outline">chevron_left</button>
+<button class="material-symbols-outlined text-outline">chevron_right</button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center text-xs font-semibold text-outline mb-4">
+<span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center text-sm">
+<span class="p-2 text-outline-variant">28</span><span class="p-2 text-outline-variant">29</span><span class="p-2 text-outline-variant">30</span>
+<span class="p-2 hover:bg-primary-fixed rounded-lg cursor-pointer">1</span>
+<span class="p-2 hover:bg-primary-fixed rounded-lg cursor-pointer">2</span>
+<span class="p-2 bg-primary text-on-primary rounded-lg font-bold shadow-md">3</span>
+<span class="p-2 hover:bg-primary-fixed rounded-lg cursor-pointer">4</span>
+<!-- Simplified grid for brevity -->
+<span class="p-2 hover:bg-primary-fixed rounded-lg cursor-pointer">5</span>
+<span class="p-2 hover:bg-primary-fixed rounded-lg cursor-pointer">6</span>
+<span class="p-2 hover:bg-primary-fixed rounded-lg cursor-pointer">7</span>
+<span class="p-2 hover:bg-primary-fixed rounded-lg cursor-pointer">8</span>
+<span class="p-2 hover:bg-primary-fixed rounded-lg cursor-pointer">9</span>
+<span class="p-2 hover:bg-primary-fixed rounded-lg cursor-pointer">10</span>
+<span class="p-2 hover:bg-primary-fixed rounded-lg cursor-pointer">11</span>
+</div>
+</div>
+<!-- Time Slots -->
+<div>
+<h3 class="font-semibold mb-4 text-on-surface">Available Slots</h3>
+<div class="grid grid-cols-2 gap-3">
+<button class="py-3 px-4 rounded-lg border border-outline-variant/30 text-sm font-medium hover:bg-primary-fixed transition-colors">09:00 AM</button>
+<button class="py-3 px-4 rounded-lg border border-outline-variant/30 text-sm font-medium hover:bg-primary-fixed transition-colors">10:30 AM</button>
+<button class="py-3 px-4 bg-primary text-on-primary rounded-lg text-sm font-bold shadow-sm">01:00 PM</button>
+<button class="py-3 px-4 rounded-lg border border-outline-variant/30 text-sm font-medium hover:bg-primary-fixed transition-colors">02:30 PM</button>
+<button class="py-3 px-4 rounded-lg border border-outline-variant/30 text-sm font-medium hover:bg-primary-fixed transition-colors">04:00 PM</button>
+<button class="py-3 px-4 rounded-lg border border-outline-variant/30 text-sm font-medium opacity-50 cursor-not-allowed bg-surface-container-high">05:30 PM</button>
+</div>
+<div class="mt-6 p-4 rounded-lg bg-tertiary-fixed/30 border-l-4 border-tertiary">
+<p class="text-xs text-on-tertiary-fixed-variant leading-relaxed">
+<span class="font-bold">Note:</span> Bookings are in 90-minute blocks to ensure space sanitization between residents.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 2: Room Type -->
+<section id="step-rooms">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">2</span>
+<h2 class="text-2xl font-bold font-headline">Choose Room Type</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Room Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 cursor-pointer shadow-sm hover:shadow-xl ring-2 ring-primary">
+<div class="h-48 overflow-hidden relative">
+<img alt="Modern office interior" class="w-full h-full object-cover" data-alt="Modern minimalist glass-walled office with natural oak wood desk and designer ergonomic chair in bright sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNKIj13UQ711A1X_JW_Ij0O_5lyKsB7-3bwXSzQfmlHsEJa62RpZKA317V3VWpX4fIsfxGe4O0pvEd5NI8vFylnVUiIinRO0NwUuhP3wwL5uF53mr1vrmbhvRSA-2WXbqzHyHUvCjIQM20uqElu2b_HHe-s3e5z7980yeOp8aXFdEvXDUWnLDKHsLSnPmgNldr1XMntqsy64unNoysh6xNqhabNAZBGhKNFN2NJLm7Log4VfeiQCp9yRWvvfHzeVtiq5NtLJD7S5o"/>
+<div class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 rounded-full text-xs font-bold">SELECTED</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold font-headline">Monolith Suite</h3>
+<span class="text-primary font-bold">$45<span class="text-xs text-secondary font-normal">/hr</span></span>
+</div>
+<div class="flex items-center gap-4 text-sm text-secondary mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">groups</span> 4-6 People</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">wifi</span> Gig-speed</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2">A focused space with noise-canceling acoustics and floor-to-ceiling city views.</p>
+</div>
+</div>
+<!-- Room Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:scale-[1.02] transition-all duration-300 cursor-pointer shadow-sm hover:shadow-xl border border-transparent hover:border-outline-variant/20">
+<div class="h-48 overflow-hidden">
+<img alt="Co-working library" class="w-full h-full object-cover" data-alt="Quiet library-style workspace with green marble tables, brass reading lamps, and dark wood bookshelves in soft evening light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUmpNOrwXpNOcAOsiukLGPLTBh2Os3FTSVHRnVyKrFt9F_DHk1FTUYmHUqlXCVTV7Jo07p2ZvgG6r9EYJ3a9SHVC3a7ZHRhfReGo2eX9Xi0QuPFX6tWfOCV6UIDIJYIpFE1NBK4AWkYQSRPpup75JGS0baM5yp0DHZx2lZi0O0oXFRlIsQoJ0t7bOBbbhlLD8HgVSVo9KDwh6qIOEQvIecdd_anvtVADE2UM1l7nKs79oMj4altPwdTGX-ZE1HgQV-Pffs1XJQSyY"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold font-headline">The Atheneum</h3>
+<span class="text-primary font-bold">$30<span class="text-xs text-secondary font-normal">/hr</span></span>
+</div>
+<div class="flex items-center gap-4 text-sm text-secondary mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">groups</span> 1-2 People</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">filter_vintage</span> Air Purified</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2">The ultimate quiet zone. Perfect for deep creative work or confidential strategy.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 3: Additional Services -->
+<section id="step-services">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">3</span>
+<h2 class="text-2xl font-bold font-headline">Additional Services</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<label class="relative flex items-center p-4 bg-surface-container rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary mr-4" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-bold text-sm">Artisan Catering</span>
+<span class="text-xs text-secondary">+$25.00</span>
+</div>
+</label>
+<label class="relative flex items-center p-4 bg-surface-container rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary mr-4" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-bold text-sm">4K Projector</span>
+<span class="text-xs text-secondary">+$15.00</span>
+</div>
+</label>
+<label class="relative flex items-center p-4 bg-surface-container rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary mr-4" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-bold text-sm">Whiteboard Kit</span>
+<span class="text-xs text-secondary">+$5.00</span>
+</div>
+</label>
+</div>
+</section>
+<!-- Step 4: Payment -->
+<section id="step-payment">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">4</span>
+<h2 class="text-2xl font-bold font-headline">Payment Method</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="border-2 border-primary bg-primary/5 p-6 rounded-xl flex items-center gap-4 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl">credit_card</span>
+<div>
+<h4 class="font-bold">Online Visa</h4>
+<p class="text-xs text-secondary">Secure instant payment</p>
+</div>
+<span class="ml-auto material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="border border-outline-variant/30 bg-surface-container-lowest p-6 rounded-xl flex items-center gap-4 cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">payments</span>
+<div>
+<h4 class="font-bold">Cash on Arrival</h4>
+<p class="text-xs text-secondary">Pay at the concierge desk</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sticky Summary Card -->
+<aside class="lg:col-span-4 sticky top-24">
+<div class="glass-panel p-8 rounded-2xl shadow-2xl border border-white/20">
+<h3 class="text-xl font-bold font-headline mb-6 pb-4 border-b border-outline-variant/20">Reservation Summary</h3>
+<div class="space-y-6">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs font-bold uppercase tracking-wider text-secondary mb-1">Space</p>
+<p class="font-semibold text-primary">Monolith Suite</p>
+</div>
+<span class="text-sm font-bold">$45.00</span>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs font-bold uppercase tracking-wider text-secondary mb-1">Date &amp; Time</p>
+<p class="font-semibold text-primary">Oct 3, 2024</p>
+<p class="text-xs text-secondary">01:00 PM - 02:30 PM</p>
+</div>
+<span class="text-xs text-secondary italic">90 mins</span>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs font-bold uppercase tracking-wider text-secondary mb-1">Add-ons</p>
+<p class="font-semibold text-primary">Artisan Catering</p>
+</div>
+<span class="text-sm font-bold">$25.00</span>
+</div>
+<div class="pt-6 border-t border-outline-variant/20">
+<div class="flex justify-between items-center mb-4">
+<span class="text-lg font-bold font-headline">Total</span>
+<span class="text-2xl font-black text-primary">$70.00</span>
+</div>
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-primary/20 scale-100 active:scale-[0.98] transition-all">
+                                Confirm Reservation
+                            </button>
+<p class="text-[10px] text-center text-secondary mt-4 leading-relaxed">
+                                By confirming, you agree to our <a class="underline" href="#">Terms of Service</a> and the <a class="underline" href="#">Sanctuary Code of Conduct</a>.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Concierge Support Mini-card -->
+<div class="mt-6 bg-surface-container-high/50 p-6 rounded-xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-slate-300">
+<img alt="Concierge" class="w-full h-full object-cover" data-alt="Close up portrait of a professional female concierge with a friendly smile, dressed in a sharp navy blazer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDclZ6JOevRmQ6DwUaceVJGZx_2gqwFry4BTeLg3LkFc4aORd-mHaHKi1McjKEtf7Ea4lpc0-TvpDhzOi_5-05fUHXqyWoFSfj2HlAUd9i8OHnvwQwY89B9_0tAitpTdZHQ9qio1_nMctiMa-rJCXakkEDbFnALUc76gLSflKSihwagdCSm_vpP4jgUljVhcwhhtGR0vtig0WLFnQIWHRPR_Pv4lRTSXZx_6r77uFfLYXl42fDyYxKO7CTmVgTxQhzLcA16CoGqVHI"/>
+</div>
+<div>
+<p class="text-xs font-bold text-primary">Need Assistance?</p>
+<p class="text-sm text-secondary">Sarah is online to help with custom layouts.</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-base font-bold text-slate-800 dark:text-slate-200 mb-4">Architectural Sanctuary</div>
+<p class="text-xs text-slate-500 leading-relaxed max-w-xs">Elevating the workspace through intentional design and quiet luxury. Your productivity deserve a masterpiece.</p>
+</div>
+<div>
+<h4 class="text-sm font-bold text-primary mb-4">Company</h4>
+<div class="flex flex-col gap-2 text-xs text-slate-500">
+<a class="hover:text-blue-900 dark:hover:text-blue-200 transition-opacity" href="#">Our Vision</a>
+<a class="hover:text-blue-900 dark:hover:text-blue-200 transition-opacity" href="#">Global Locations</a>
+<a class="hover:text-blue-900 dark:hover:text-blue-200 transition-opacity" href="#">Careers</a>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-bold text-primary mb-4">Support</h4>
+<div class="flex flex-col gap-2 text-xs text-slate-500">
+<a class="hover:text-blue-900 dark:hover:text-blue-200 transition-opacity" href="#">Contact Support</a>
+<a class="hover:text-blue-900 dark:hover:text-blue-200 transition-opacity" href="#">Privacy Policy</a>
+<a class="hover:text-blue-900 dark:hover:text-blue-200 transition-opacity" href="#">Terms of Service</a>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-bold text-primary mb-4">Newsletter</h4>
+<div class="flex gap-2">
+<input class="bg-surface-container-lowest border border-outline-variant/30 text-xs p-2 rounded flex-grow" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary px-3 py-2 rounded material-symbols-outlined">arrow_forward</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center text-xs text-slate-400">
+<p>© 2024 Architectural Sanctuary. All Rights Reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+</body></html>

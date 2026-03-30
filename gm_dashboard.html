@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>General Manager Dashboard | Architectural Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#eef1f3",
+              "on-primary-container": "#a2c6fd",
+              "error": "#ba1a1a",
+              "background": "#f7fafc",
+              "tertiary-fixed": "#ffdead",
+              "error-container": "#ffdad6",
+              "primary": "#0e3b69",
+              "on-surface-variant": "#43474f",
+              "tertiary": "#4f3500",
+              "surface": "#f7fafc",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "on-background": "#181c1e",
+              "on-tertiary-fixed": "#281900",
+              "on-error": "#ffffff",
+              "inverse-surface": "#2d3133",
+              "outline": "#737780",
+              "surface-dim": "#d7dadc",
+              "secondary-container": "#e1e1c9",
+              "primary-fixed": "#d4e3ff",
+              "surface-bright": "#f7fafc",
+              "outline-variant": "#c3c6d0",
+              "primary-container": "#2c5282",
+              "on-secondary-container": "#636451",
+              "primary-fixed-dim": "#a5c8ff",
+              "on-primary-fixed-variant": "#204877",
+              "surface-container": "#ebeef0",
+              "surface-container-low": "#f1f4f6",
+              "on-tertiary-fixed-variant": "#604100",
+              "surface-tint": "#3b6090",
+              "tertiary-container": "#6d4a00",
+              "on-surface": "#181c1e",
+              "on-secondary": "#ffffff",
+              "surface-container-highest": "#e0e3e5",
+              "on-secondary-fixed": "#1b1d0e",
+              "tertiary-fixed-dim": "#f0be6e",
+              "surface-variant": "#e0e3e5",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#edbc6c",
+              "secondary-fixed-dim": "#c8c8b0",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#474836",
+              "surface-container-high": "#e5e9eb",
+              "secondary-fixed": "#e4e4cc",
+              "inverse-primary": "#a5c8ff",
+              "secondary": "#5e604d",
+              "on-primary": "#ffffff",
+              "on-primary-fixed": "#001c3a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7fafc; color: #181c1e; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 flex flex-col p-4 gap-2 z-50">
+<div class="mb-8 px-2">
+<h1 class="text-lg font-black text-blue-900 dark:text-blue-100 font-headline cursor-pointer" onclick="window.location.href='./home_page.html'">Architectural Sanctuary</h1>
+<p class="text-xs text-slate-500 font-semibold mt-1">Concierge Access</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2.5 transition-transform duration-200 hover:translate-x-1 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg" href="./admin_control_panel.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-semibold font-headline">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 transition-transform duration-200 hover:translate-x-1 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg" href="./booking_history.html">
+<span class="material-symbols-outlined">event_available</span>
+<span class="text-sm font-semibold font-headline">My Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 transition-transform duration-200 hover:translate-x-1 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg" href="./wallet_balance.html">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-sm font-semibold font-headline">Wallet</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 transition-transform duration-200 hover:translate-x-1 bg-white dark:bg-slate-800 text-blue-900 dark:text-blue-300 rounded-lg shadow-sm font-bold" href="./gm_dashboard.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="text-sm font-semibold font-headline">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 transition-transform duration-200 hover:translate-x-1 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg" href="./receptionist_portal.html">
+<span class="material-symbols-outlined">badge</span>
+<span class="text-sm font-semibold font-headline">Staff Portal</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 transition-transform duration-200 hover:translate-x-1 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-semibold font-headline">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-800 space-y-1">
+<div class="flex items-center gap-3 px-3 py-4 mb-2">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="professional portrait of a senior executive male in a suit with a kind expression and soft office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhf_HwINixd7_zw1kFoReT_gJs9KbQ9XdM52YSle68IHIMlqTGNpjy7AtqmFrFauAK6dratxFO5S80OEhmCgzwHX2TvOvsrfcYWxMFPx2WQ7Il1E4cSf4SU5fy9yOm9rcp4d4VhcOfJCooMrPYplZ4MKg1ypw82HsJwXC_Oqk_vHBwEX1CuwKDU5vHnzJXyutzc_Zlt0kojrfqmmPg9OnLkinw38GeLLCoCAwHfko_H7PDcY2kvFIjz4Ru8YsiMc5kzlAizSR_Dl8"/>
+<div class="flex flex-col overflow-hidden">
+<span class="text-sm font-bold text-blue-900 truncate leading-none">Alex Sterling</span>
+<span class="text-[10px] text-slate-500 uppercase tracking-wider mt-1">Premium Member</span>
+</div>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 hover:text-blue-900" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm font-semibold">Support</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-500 hover:text-error" href="./home_page.html">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-semibold">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen bg-surface">
+<!-- TopAppBar (Authority: JSON) -->
+<header class="fixed top-0 right-0 left-64 z-40 bg-slate-50/80 backdrop-blur-md shadow-sm h-16 px-8 flex justify-between items-center border-b border-transparent">
+<div class="flex items-center gap-8">
+<h2 class="text-xl font-bold tracking-tight text-blue-900 font-headline">Executive Analytics</h2>
+<div class="hidden md:flex gap-6">
+<a class="text-sm font-medium text-slate-600 hover:text-blue-900" href="./home_page.html">Explore</a>
+<a class="text-sm font-medium text-slate-600 hover:text-blue-900" href="./booking_page.html">Bookings</a>
+<a class="text-sm font-medium text-blue-900 border-b-2 border-blue-900 pb-1" href="./plans_pricing.html">Plans</a>
+<a class="text-sm font-medium text-slate-600 hover:text-blue-900" href="#">Help</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<span class="material-symbols-outlined text-slate-500 cursor-pointer p-2 rounded-full hover:bg-slate-200/50 transition-colors" onclick="window.location.href='./notifications_system.html'">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full ring-2 ring-white"></span>
+</div>
+<button class="bg-primary-container text-white px-5 py-2 rounded-lg text-sm font-bold shadow-sm hover:opacity-90 active:scale-95 transition-all" onclick="window.location.href='./booking_page.html'">
+                    Quick Book
+                </button>
+</div>
+</header>
+<div class="pt-24 pb-12 px-8 max-w-7xl mx-auto">
+<!-- Dashboard Header Section -->
+<section class="mb-12">
+<div class="flex justify-between items-end">
+<div>
+<h1 class="text-4xl font-extrabold text-on-surface font-headline tracking-tight">System Overview</h1>
+<p class="text-on-surface-variant mt-2 max-w-lg">Real-time performance metrics and architectural occupancy insights for Q4 2024.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-high text-primary text-sm font-semibold hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                            Last 30 Days
+                        </button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-on-primary text-sm font-semibold hover:opacity-95 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-sm">download</span>
+                            Export Report
+                        </button>
+</div>
+</div>
+</section>
+<!-- KPI Row (Stats) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<!-- Total Creators -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_32px_64px_-12px_rgba(24,28,30,0.06)] border border-outline-variant/15 flex flex-col justify-between group hover:scale-[1.02] transition-transform">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="p-3 rounded-lg bg-primary-fixed text-on-primary-fixed-variant">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<span class="text-xs font-bold text-tertiary px-2 py-1 bg-tertiary-fixed rounded">+12% vs LY</span>
+</div>
+<p class="text-sm font-semibold text-on-surface-variant uppercase tracking-widest mb-1">Total Creators</p>
+<h3 class="text-3xl font-extrabold text-on-surface font-headline">12,842</h3>
+</div>
+<div class="mt-6 h-1 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[75%] rounded-full"></div>
+</div>
+</div>
+<!-- Active Subscriptions -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_32px_64px_-12px_rgba(24,28,30,0.06)] border border-outline-variant/15 flex flex-col justify-between group hover:scale-[1.02] transition-transform">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="p-3 rounded-lg bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined">subscriptions</span>
+</div>
+<span class="text-xs font-bold text-primary px-2 py-1 bg-primary-fixed rounded">94% Retention</span>
+</div>
+<p class="text-sm font-semibold text-on-surface-variant uppercase tracking-widest mb-1">Active Subscriptions</p>
+<h3 class="text-3xl font-extrabold text-on-surface font-headline">8,491</h3>
+</div>
+<div class="mt-6 flex items-center gap-2">
+<div class="flex -space-x-2">
+<img class="w-6 h-6 rounded-full border-2 border-white object-cover" data-alt="close up of a professional woman with a bright smile in a daylight studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLHLqqm8Jr4guRvZolp-CXX-QThVLR9Jg3qUrOTVFaUmmLwwh13_XsKpk2K7QRckL1p_fDrQWoaIpxpUJ3OQUfBfTAPXrdG2a2cxR3GzhV3bwR7qaC814QvsMr4Y0NG1Snq89tm-k2REg45-YK1AmCuxsBYub9mmmDZDY8gSNj2l1f7C_UVpz7INKkRUzEmdj2rvK3Onm6aqvvUA62zw3U6qryHFAGnW0FHnn52vGmgzESNAgt3DyIUZij3Jb1pwNIQcjLQzR17K4"/>
+<img class="w-6 h-6 rounded-full border-2 border-white object-cover" data-alt="close up portrait of a young man with curly hair and a neutral expression outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXEhXqxFF4PMiOt3d8VehwTuY5kiCO5_Y7nEhgysrIXnGYH6kH1NEtB8o-jLbN4O4wwBatfCSzVSYae1KtZ7HSmS_QapjwPQaIW5sBCaQM55Wf3Mh9pVYjd9EX0wU21H3RiBsah5VmdOLIuMj9Ckp9VBv4X3ZL9ZQtTEVKQ2OObMq-_0JmNalrc9U_iwqwlLuTxfscJKuJgQwiBVkBob71tFnX76wVNB2n-m0rC3n99atoD4E73G58WilE3E-JjmY1vVEpevgeHjo"/>
+<img class="w-6 h-6 rounded-full border-2 border-white object-cover" data-alt="close up of a stylish woman wearing a turtleneck and glasses in an urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdh7AeB-32mjIqmglSGzKmEKJ-s8HacsJ0g-5EcZ6J4Px1ItWDhR065VR2WFCwPl5Q_bm9j_V2QjYPTruSsHbkk6MP7HTUgtCOszOvi-Q0FObIf-qmNt2svZCTZmuRvK5KSj67V8uI2JMo0-WoOZVeeiblWNQObUuIUEq-byZifiuLdlmLso2HKNFg7QadQLVb1AVd0ItNNzDwxkhD0zowVZxR0eAYGrM3fjJsTo_d8exJptcFx3GKUvvt6s-tDrcvIg6ZJ_EZn3o"/>
+</div>
+<span class="text-xs font-medium text-on-surface-variant">+42 new today</span>
+</div>
+</div>
+<!-- System Health -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_32px_64px_-12px_rgba(24,28,30,0.06)] border border-outline-variant/15 flex flex-col justify-between group hover:scale-[1.02] transition-transform">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="p-3 rounded-lg bg-error-container text-on-error-container">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-bold text-on-surface-variant">Live Status</span>
+</div>
+</div>
+<p class="text-sm font-semibold text-on-surface-variant uppercase tracking-widest mb-1">System Health</p>
+<h3 class="text-3xl font-extrabold text-on-surface font-headline">99.98%</h3>
+</div>
+<p class="text-xs text-on-surface-variant mt-6 italic">Last checked 2 mins ago</p>
+</div>
+</section>
+<!-- Main Charts Grid (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 grid-rows-2 gap-6 h-[700px]">
+<!-- Monthly Revenue Line Chart Placeholder -->
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/15 relative overflow-hidden group">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="text-xl font-bold font-headline text-on-surface">Monthly Revenue</h3>
+<p class="text-sm text-on-surface-variant">Year-over-year revenue progression</p>
+</div>
+<div class="text-right">
+<span class="text-2xl font-bold text-primary font-headline">$142,500</span>
+<p class="text-xs font-semibold text-on-surface-variant">Current Month</p>
+</div>
+</div>
+<!-- Visualization Placeholder -->
+<div class="absolute bottom-0 left-0 right-0 h-48 px-8">
+<svg class="w-full h-full" viewbox="0 0 800 200">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#0e3b69" stop-opacity="0.15"></stop>
+<stop offset="100%" stop-color="#0e3b69" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,150 Q100,120 200,140 T400,100 T600,60 T800,80" fill="none" stroke="#0e3b69" stroke-linecap="round" stroke-width="3"></path>
+<path d="M0,150 Q100,120 200,140 T400,100 T600,60 T800,80 V200 H0 Z" fill="url(#chartGradient)"></path>
+<circle cx="200" cy="140" fill="#0e3b69" r="4"></circle>
+<circle cx="400" cy="100" fill="#0e3b69" r="4"></circle>
+<circle cx="600" cy="60" fill="#0e3b69" r="4"></circle>
+</svg>
+</div>
+</div>
+<!-- Occupancy Rates Donut Chart Placeholder -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/15 flex flex-col items-center">
+<h3 class="text-xl font-bold font-headline text-on-surface self-start mb-2">Occupancy</h3>
+<p class="text-sm text-on-surface-variant self-start mb-8">Capacity utilization by space type</p>
+<div class="relative w-48 h-48 mb-8">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<circle cx="18" cy="18" fill="none" r="16" stroke="#e0e3e5" stroke-width="3.5"></circle>
+<circle cx="18" cy="18" fill="none" r="16" stroke="#0e3b69" stroke-dasharray="75, 100" stroke-width="3.5"></circle>
+<circle cx="18" cy="18" fill="none" r="16" stroke="#5e604d" stroke-dasharray="45, 100" stroke-width="3.5"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-3xl font-black font-headline text-on-surface">82%</span>
+<span class="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider">Avg Rate</span>
+</div>
+</div>
+<div class="w-full space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-sm font-medium">Private Suites</span>
+</div>
+<span class="text-sm font-bold">92%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="text-sm font-medium">Open Desks</span>
+</div>
+<span class="text-sm font-bold">71%</span>
+</div>
+</div>
+</div>
+<!-- Booking Volume Details -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-transparent flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-bold font-headline text-on-surface">Booking Volume</h3>
+<p class="text-sm text-on-surface-variant mb-6">Daily meeting room reservations</p>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-xs font-bold text-on-surface-variant">Mon</span>
+<div class="w-8 bg-primary rounded-t-sm h-12"></div>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-xs font-bold text-on-surface-variant">Tue</span>
+<div class="w-8 bg-primary rounded-t-sm h-20"></div>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-xs font-bold text-on-surface-variant">Wed</span>
+<div class="w-8 bg-primary rounded-t-sm h-32"></div>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-xs font-bold text-on-surface-variant">Thu</span>
+<div class="w-8 bg-primary rounded-t-sm h-24"></div>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-xs font-bold text-on-surface-variant">Fri</span>
+<div class="w-8 bg-primary rounded-t-sm h-16"></div>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant/20 flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Peak Hour</span>
+<span class="text-sm font-bold text-primary">10:00 AM - 2:00 PM</span>
+</div>
+</div>
+<!-- Recent Events (Activity Feed) -->
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/15 overflow-hidden">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold font-headline text-on-surface">Recent Sanctuary Activity</h3>
+<a class="text-sm font-bold text-primary hover:underline" href="#">View All</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-[10px] uppercase font-bold text-on-surface-variant border-b border-outline-variant/15">
+<th class="pb-3 px-2">Member</th>
+<th class="pb-3 px-2">Location</th>
+<th class="pb-3 px-2">Action</th>
+<th class="pb-3 px-2">Value</th>
+<th class="pb-3 px-2">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/15">
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 px-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-[10px] font-bold">JD</div>
+<span class="text-sm font-semibold">Julianna DeWitt</span>
+</div>
+</td>
+<td class="py-4 px-2 text-sm">Oslo Central</td>
+<td class="py-4 px-2 text-sm text-on-surface-variant italic">Suite Booking</td>
+<td class="py-4 px-2 text-sm font-bold">$2,400</td>
+<td class="py-4 px-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-secondary-container text-on-secondary-container uppercase">Confirmed</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 px-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-[10px] font-bold">MK</div>
+<span class="text-sm font-semibold">Marcus Kael</span>
+</div>
+</td>
+<td class="py-4 px-2 text-sm">Berlin Tiergarten</td>
+<td class="py-4 px-2 text-sm text-on-surface-variant italic">Membership Renewal</td>
+<td class="py-4 px-2 text-sm font-bold">$890</td>
+<td class="py-4 px-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-secondary-container text-on-secondary-container uppercase">Confirmed</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 px-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-[10px] font-bold text-on-tertiary-fixed">LW</div>
+<span class="text-sm font-semibold">Lydia Wells</span>
+</div>
+</td>
+<td class="py-4 px-2 text-sm">London Shoreditch</td>
+<td class="py-4 px-2 text-sm text-on-surface-variant italic">Event Hosting</td>
+<td class="py-4 px-2 text-sm font-bold">$12,500</td>
+<td class="py-4 px-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-tertiary-fixed text-on-tertiary-fixed-variant uppercase">Pending</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer (Authority: JSON) -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+<div class="col-span-1">
+<h4 class="text-base font-bold text-slate-800 dark:text-slate-200 mb-4">Architectural Sanctuary</h4>
+<p class="text-xs text-slate-500 font-body leading-relaxed italic">Designing the future of intentional work spaces and executive collaboration environments.</p>
+</div>
+<div class="col-span-1">
+<h5 class="text-xs font-bold uppercase tracking-widest text-blue-900 dark:text-blue-400 mb-4">Resources</h5>
+<ul class="space-y-2">
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-opacity" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="text-xs font-bold uppercase tracking-widest text-blue-900 dark:text-blue-400 mb-4">Support</h5>
+<ul class="space-y-2">
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-opacity" href="#
+  
+  ">Contact Support</a></li>
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-opacity" href="#">Location Finder</a></li>
+</ul>
+</div>
+<div class="col-span-1 text-right">
+<p class="text-xs text-slate-500 mb-4">© 2024 Architectural Sanctuary. All Rights Reserved.</p>
+<div class="flex justify-end gap-4">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors">language</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors">share</span>
+</div>
+</div>
+</div>
+</footer>
+</main>
+<!-- Floating Action Button (FAB) Suppressed on Dashboards as per rules -->
+</body></html>

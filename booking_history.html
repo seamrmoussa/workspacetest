@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking History - Architectural Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#eef1f3",
+              "on-primary-container": "#a2c6fd",
+              "error": "#ba1a1a",
+              "background": "#f7fafc",
+              "tertiary-fixed": "#ffdead",
+              "error-container": "#ffdad6",
+              "primary": "#0e3b69",
+              "on-surface-variant": "#43474f",
+              "tertiary": "#4f3500",
+              "surface": "#f7fafc",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "on-background": "#181c1e",
+              "on-tertiary-fixed": "#281900",
+              "on-error": "#ffffff",
+              "inverse-surface": "#2d3133",
+              "outline": "#737780",
+              "surface-dim": "#d7dadc",
+              "secondary-container": "#e1e1c9",
+              "primary-fixed": "#d4e3ff",
+              "surface-bright": "#f7fafc",
+              "outline-variant": "#c3c6d0",
+              "primary-container": "#2c5282",
+              "on-secondary-container": "#636451",
+              "primary-fixed-dim": "#a5c8ff",
+              "on-primary-fixed-variant": "#204877",
+              "surface-container": "#ebeef0",
+              "surface-container-low": "#f1f4f6",
+              "on-tertiary-fixed-variant": "#604100",
+              "surface-tint": "#3b6090",
+              "tertiary-container": "#6d4a00",
+              "on-surface": "#181c1e",
+              "on-secondary": "#ffffff",
+              "surface-container-highest": "#e0e3e5",
+              "on-secondary-fixed": "#1b1d0e",
+              "tertiary-fixed-dim": "#f0be6e",
+              "surface-variant": "#e0e3e5",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#edbc6c",
+              "secondary-fixed-dim": "#c8c8b0",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#474836",
+              "surface-container-high": "#e5e9eb",
+              "secondary-fixed": "#e4e4cc",
+              "inverse-primary": "#a5c8ff",
+              "secondary": "#5e604d",
+              "on-primary-fixed": "#001c3a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Sidebar Navigation -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-outline-variant/15 bg-slate-100 flex flex-col p-4 gap-2 z-40">
+<div class="mb-8 px-2">
+<span class="text-lg font-black text-blue-900 tracking-tight cursor-pointer" onclick="window.location.href='#'">Architectural Sanctuary</span>
+</div>
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 hover:translate-x-1 transition-all duration-200 rounded-lg" href="./admin_control_panel.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-semibold font-headline">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white text-blue-900 rounded-lg shadow-sm font-bold scale-98 transition-all" href="./booking_history.html">
+<span class="material-symbols-outlined">event_available</span>
+<span class="text-sm font-semibold font-headline">My Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 hover:translate-x-1 transition-all duration-200 rounded-lg" href="./wallet_balance.html">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-sm font-semibold font-headline">Wallet</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 hover:translate-x-1 transition-all duration-200 rounded-lg" href="./gm_dashboard.html">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-semibold font-headline">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 hover:translate-x-1 transition-all duration-200 rounded-lg" href="./receptionist_portal.html">
+<span class="material-symbols-outlined">badge</span>
+<span class="text-sm font-semibold font-headline">Staff Portal</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 hover:translate-x-1 transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-semibold font-headline">Settings</span>
+</a>
+</div>
+<div class="mt-auto pt-4 border-t border-outline-variant/15 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 hover:translate-x-1 transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm font-semibold font-headline">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 hover:translate-x-1 transition-all duration-200 rounded-lg" href="./home_page.html">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-semibold font-headline">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen">
+<!-- Header Section -->
+<header class="h-16 px-8 flex justify-between items-center sticky top-0 bg-surface/80 backdrop-blur-md z-30">
+<h1 class="text-2xl font-extrabold font-headline tracking-tight text-primary">Booking History</h1>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors" onclick="window.location.href='#'">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-outline-variant/30">
+<div class="text-right">
+<p class="text-xs font-bold text-primary font-headline">Concierge Access</p>
+<p class="text-[10px] text-secondary">Premium Member</p>
+</div>
+<img alt="User Profile Picture" class="w-10 h-10 rounded-full object-cover" data-alt="Close-up portrait of a professional man with a friendly expression in a modern office environment with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvSdwBcHl_VswKpdTUgoZvyAvaWNxtSOw_wG18uPghxRVngjPa-G9HGZQInG7_ptXgFA3Qcx1Ugt6mNKHdrjytJEuA_QUfOFx_NHsPX7YulFYNN7_rJeQuz159BVgg98IfdbhrnEXdC5b3bB0NMgthFZVkoSuQG1jBWClpE8WltPHIso09m-4QrfZyft0wVm9dpMvZMWzJvUpx1eNDigjxH4gZds9TFbWIv6qwTYeqZxIkIy-6VvHGaZFBwNP7Ys4iBqSO1RqkpwI"/>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="p-8 max-w-7xl mx-auto space-y-12">
+<!-- Filter & Search Ribbon -->
+<section class="flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="space-y-1">
+<p class="text-sm font-medium text-secondary">Review your past sanctuary experiences</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 text-xs font-bold bg-primary text-on-primary rounded-full">All Bookings</span>
+<span class="px-3 py-1 text-xs font-bold bg-surface-container-high text-secondary rounded-full hover:bg-secondary-container transition-colors cursor-pointer">Completed</span>
+<span class="px-3 py-1 text-xs font-bold bg-surface-container-high text-secondary rounded-full hover:bg-secondary-container transition-colors cursor-pointer">Cancelled</span>
+</div>
+</div>
+<div class="relative w-full md:w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline-variant/15 rounded-lg text-sm focus:ring-2 focus:ring-primary-fixed focus:border-primary outline-none transition-all" placeholder="Search by ID or Location..." type="text"/>
+</div>
+</section>
+<!-- Bookings List (Editorial Layout) -->
+<section class="space-y-6">
+<!-- Booking Item 1 -->
+<div class="group bg-surface-container-lowest hover:scale-[1.01] transition-all duration-300 rounded-xl p-6 flex flex-col lg:flex-row items-center gap-8 border-l-4 border-primary shadow-sm hover:shadow-xl">
+<div class="w-full lg:w-48 aspect-video overflow-hidden rounded-lg bg-surface-container">
+<img alt="The Zenith Suite" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A luxurious, minimalist modern office suite with large windows overlooking a city skyline at dusk with warm interior lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6ylrpQK2uaAPsdNRSc9j9AyVvyuBHQO94Put17mEZLmPwGSMX-KXYeoWu6ZTemdjnR44dkC9zQXodA3jAzFzBACkBU5pokjXVc4_sjCxtPd4_1QYsR0bI6WVu3NpGOL7LuLxN43yBk4dnHmZmpr_F7A2S-gqGlkxnJSxeeOhcjxC7JQDns19KGrnzV7iRoF3R-88UXu6tsTl6MRzkhPJFgfScGHDqeVpw-u3BcpJVBDEQOPpntD83bxjfQ4HTQr13uiBsB-mEyBc"/>
+</div>
+<div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+<div>
+<p class="text-[10px] font-bold text-outline tracking-widest uppercase mb-1">Reference ID</p>
+<p class="font-headline font-bold text-primary">#AS-99210</p>
+<p class="text-sm font-semibold mt-2">The Zenith Suite</p>
+<p class="text-xs text-secondary">Manhattan Sanctuary, Floor 42</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-outline tracking-widest uppercase mb-1">Date &amp; Time</p>
+<p class="text-sm font-medium">October 24, 2023</p>
+<p class="text-xs text-secondary mt-1">09:00 AM - 05:00 PM (8h)</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-outline tracking-widest uppercase mb-1">Status</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-sm font-bold text-primary">Completed</span>
+</div>
+<div class="flex gap-1 mt-2">
+<span class="material-symbols-outlined text-xs text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<div class="flex flex-row lg:flex-col gap-3 w-full lg:w-auto shrink-0">
+<button class="flex-1 lg:flex-none px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-on-primary text-sm font-bold rounded-lg hover:shadow-lg active:scale-95 transition-all">
+                            Rebook Same Setup
+                        </button>
+<button class="flex-1 lg:flex-none px-6 py-2.5 bg-surface-container-high text-primary text-sm font-bold rounded-lg hover:bg-secondary-container active:scale-95 transition-all">
+                            Review Sanctuary
+                        </button>
+</div>
+</div>
+<!-- Booking Item 2 -->
+<div class="group bg-surface-container-lowest hover:scale-[1.01] transition-all duration-300 rounded-xl p-6 flex flex-col lg:flex-row items-center gap-8 border-l-4 border-outline-variant shadow-sm hover:shadow-xl">
+<div class="w-full lg:w-48 aspect-video overflow-hidden rounded-lg bg-surface-container">
+<img alt="The Atrium Lounge" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Interior of a light-filled coffee shop and coworking space with soft oak wood textures and many green indoor plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYepsDEtwi4w6QR_misJ8WiAWD0_gj8jnXx-nbMUTCrygh6me9Z9NvheHgD52D7rQh2WlrfE1f0_jKjv3LCdBVTRUpnelx5h_AScaCTg03eEDwsL28y08yGJyKkRxQjGI1ZV7Xx0rd7LGbhQ8I8Ey4ccQ4j6lj-pfywNHQU2NygjJlGjXAh2yz9zwQmOC0z5udsXVfdqorKlKzGaUM8kPN8R6guemonUUDE0rXPBWpZpURvEYFPIwuLDyEpsQDTa_ka1AghDCixiI"/>
+</div>
+<div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+<div>
+<p class="text-[10px] font-bold text-outline tracking-widest uppercase mb-1">Reference ID</p>
+<p class="font-headline font-bold text-primary">#AS-98442</p>
+<p class="text-sm font-semibold mt-2">The Atrium Lounge</p>
+<p class="text-xs text-secondary">Brooklyn Commons</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-outline tracking-widest uppercase mb-1">Date &amp; Time</p>
+<p class="text-sm font-medium">September 12, 2023</p>
+<p class="text-xs text-secondary mt-1">11:30 AM - 02:30 PM (3h)</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-outline tracking-widest uppercase mb-1">Status</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="text-sm font-bold text-outline">Cancelled</span>
+</div>
+<p class="text-[10px] text-error mt-1 italic">Refund Processed</p>
+</div>
+</div>
+<div class="flex flex-row lg:flex-col gap-3 w-full lg:w-auto shrink-0">
+<button class="flex-1 lg:flex-none px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-on-primary text-sm font-bold rounded-lg hover:shadow-lg active:scale-95 transition-all">
+                            Rebook Same Setup
+                        </button>
+<button class="flex-1 lg:flex-none px-6 py-2.5 opacity-50 cursor-not-allowed bg-surface-container-high text-primary text-sm font-bold rounded-lg">
+                            Review Unavailable
+                        </button>
+</div>
+</div>
+<!-- Booking Item 3 -->
+<div class="group bg-surface-container-lowest hover:scale-[1.01] transition-all duration-300 rounded-xl p-6 flex flex-col lg:flex-row items-center gap-8 border-l-4 border-primary shadow-sm hover:shadow-xl">
+<div class="w-full lg:w-48 aspect-video overflow-hidden rounded-lg bg-surface-container">
+<img alt="Focus Capsule 04" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A small, futuristic soundproof glass workstation pod with ergonomic black chair and soft LED accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9VmqSfcEquAVrC_wIOZCX418hGcUiHvnP7AvN2UIGPVHBaaEXSM_2MUFHQrjBJCDaPJ9Lbg25aphJb1qkzN3C6IEsFaahuLmQiQv4tQLSJRgvVcAyIwcMt02GMkx7gpoN3650Ljga1H-YXFNuYcjp-hvn_yAzaFtL8OdKuV5Qc-I1Q800AImViXptMjZy7xaTRfAgQ2p3SWqvhPnHTOAv_To4W8UTeFaEMIzjFWX8BygoFWXYQTB3gUx4EtmXpvVZsW-XQTQ2QAk"/>
+</div>
+<div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+<div>
+<p class="text-[10px] font-bold text-outline tracking-widest uppercase mb-1">Reference ID</p>
+<p class="font-headline font-bold text-primary">#AS-97551</p>
+<p class="text-sm font-semibold mt-2">Focus Capsule 04</p>
+<p class="text-xs text-secondary">London West End</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-outline tracking-widest uppercase mb-1">Date &amp; Time</p>
+<p class="text-sm font-medium">August 29, 2023</p>
+<p class="text-xs text-secondary mt-1">08:00 AM - 12:00 PM (4h)</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-outline tracking-widest uppercase mb-1">Status</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-sm font-bold text-primary">Completed</span>
+</div>
+<button class="mt-2 text-primary text-xs font-bold underline hover:text-primary-container">View Receipt</button>
+</div>
+</div>
+<div class="flex flex-row lg:flex-col gap-3 w-full lg:w-auto shrink-0">
+<button class="flex-1 lg:flex-none px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-on-primary text-sm font-bold rounded-lg hover:shadow-lg active:scale-95 transition-all">
+                            Rebook Same Setup
+                        </button>
+<button class="flex-1 lg:flex-none px-6 py-2.5 bg-surface-container-high text-primary text-sm font-bold rounded-lg hover:bg-secondary-container active:scale-95 transition-all">
+                            Leave a Review
+                        </button>
+</div>
+</div>
+</section>
+<!-- Stats Ribbon (Asymmetrical Layout) -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-8 pt-12">
+<div class="bg-surface-container-low p-6 rounded-lg space-y-2 col-span-1 md:col-span-2">
+<h3 class="font-headline font-extrabold text-primary text-xl">Sanctuary Loyalty</h3>
+<p class="text-sm text-secondary">You have spent 142 hours in our spaces over the last year. You are 8 hours away from "Elite Concierge" status.</p>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden mt-4">
+<div class="h-full bg-primary" style="width: 85%"></div>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-6 rounded-lg flex flex-col justify-center items-center text-center">
+<p class="text-[10px] font-bold tracking-widest uppercase opacity-70">Total Bookings</p>
+<p class="text-4xl font-headline font-black mt-1">24</p>
+</div>
+<div class="bg-tertiary-fixed p-6 rounded-lg flex flex-col justify-center items-center text-center">
+<p class="text-[10px] font-bold tracking-widest uppercase text-on-tertiary-fixed-variant">Avg Rating</p>
+<div class="flex items-center gap-1 mt-1">
+<p class="text-4xl font-headline font-black text-on-tertiary-fixed">4.9</p>
+<span class="material-symbols-outlined text-on-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-outline-variant/15 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+<div class="space-y-4">
+<span class="text-base font-bold text-slate-800">Architectural Sanctuary</span>
+<p class="text-xs text-slate-500 leading-relaxed">Redefining professional environments with editorial design and concierge-level attention to detail.</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-[10px] font-bold text-outline tracking-widest uppercase">Quick Links</span>
+<a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Location Finder</a>
+<a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Member Benefits</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-[10px] font-bold text-outline tracking-widest uppercase">Support</span>
+<a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Contact Support</a>
+<a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-[10px] font-bold text-outline tracking-widest uppercase">Newsletter</span>
+<div class="flex gap-2">
+<input class="flex-1 text-xs bg-white border border-outline-variant/15 rounded-lg px-3 py-2 outline-none" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-xs font-bold" onclick="window.location.href='#'">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-outline-variant/10 text-center">
+<p class="text-[10px] text-slate-400 font-medium">© 2024 Architectural Sanctuary. All Rights Reserved.</p>
+</div>
+</footer>
+</main>
+<!-- Contextual FAB - Suppression Logic: Hidden as per instruction for History pages -->
+</body></html>

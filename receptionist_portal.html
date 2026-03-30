@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Architectural Sanctuary - Staff Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#eef1f3",
+                        "on-primary-container": "#a2c6fd",
+                        "error": "#ba1a1a",
+                        "background": "#f7fafc",
+                        "tertiary-fixed": "#ffdead",
+                        "error-container": "#ffdad6",
+                        "primary": "#0e3b69",
+                        "on-surface-variant": "#43474f",
+                        "tertiary": "#4f3500",
+                        "surface": "#f7fafc",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "on-background": "#181c1e",
+                        "on-tertiary-fixed": "#281900",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "outline": "#737780",
+                        "surface-dim": "#d7dadc",
+                        "secondary-container": "#e1e1c9",
+                        "primary-fixed": "#d4e3ff",
+                        "surface-bright": "#f7fafc",
+                        "outline-variant": "#c3c6d0",
+                        "primary-container": "#2c5282",
+                        "on-secondary-container": "#636451",
+                        "primary-fixed-dim": "#a5c8ff",
+                        "on-primary-fixed-variant": "#204877",
+                        "surface-container": "#ebeef0",
+                        "surface-container-low": "#f1f4f6",
+                        "on-tertiary-fixed-variant": "#604100",
+                        "surface-tint": "#3b6090",
+                        "tertiary-container": "#6d4a00",
+                        "on-surface": "#181c1e",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-fixed": "#1b1d0e",
+                        "tertiary-fixed-dim": "#f0be6e",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#edbc6c",
+                        "secondary-fixed-dim": "#c8c8b0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#474836",
+                        "surface-container-high": "#e5e9eb",
+                        "secondary-fixed": "#e4e4cc",
+                        "inverse-primary": "#a5c8ff",
+                        "secondary": "#5e604d",
+                        "on-primary-fixed": "#001c3a"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+            color: #181c1e;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Manrope', sans-serif;
+        }
+        .tonal-shift-bg {
+            background-color: #f1f4f6;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 flex flex-col p-4 gap-2 z-40">
+<div class="mb-8 px-2">
+<h1 class="text-lg font-black text-blue-900 dark:text-blue-100 cursor-pointer" onclick="window.location.href='#'">Architectural Sanctuary</h1>
+<div class="mt-4 flex items-center gap-3 p-2 rounded-lg bg-white dark:bg-slate-800 shadow-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed overflow-hidden">
+<img alt="User Profile Picture" class="w-full h-full object-cover" data-alt="professional portrait of a concierge staff member in a clean well-lit modern office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIdEsoBlwv7D_x540zCpG4WiPU8T1jcBVHZX4oS_yb_pavUQkhaSxbDz8fq2cdy9_DEz6wUrTNcHfSxX5j-LGL0oIIMzszs_9tf5iVAEzawbhnasx0DZ4XG_cDuAHs3X-6czBB8WanIRoQy3hQC5KaqbLoBt-_2j2lKxtWK-IQE_7Kg-ll7CCZZBIs4Y7LsokfFGeiKv7B4oAfG98a_yChqiRnEnmd3Rl31TJ4CE0U3lufaSEPzTeaphOpQw-n8opeUNxjZKx-2oI"/>
+</div>
+<div>
+<p class="text-sm font-semibold Manrope text-blue-900 dark:text-blue-400">Concierge Access</p>
+<p class="text-[10px] uppercase tracking-wider text-slate-500">Premium Member</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200 rounded-lg text-sm font-semibold Manrope" href="./admin_control_panel.html">
+<span class="material-symbols-outlined">dashboard</span> Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200 rounded-lg text-sm font-semibold Manrope" href="./booking_page.html">
+<span class="material-symbols-outlined">event_available</span> My Bookings
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200 rounded-lg text-sm font-semibold Manrope" href="./wallet_balance.html">
+<span class="material-symbols-outlined">account_balance_wallet</span> Wallet
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200 rounded-lg text-sm font-semibold Manrope" href="./gm_dashboard.html">
+<span class="material-symbols-outlined">analytics</span> Analytics
+            </a>
+<!-- Active State: Staff Portal -->
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800 text-blue-900 dark:text-blue-300 rounded-lg shadow-sm font-bold text-sm Manrope" href="./receptionist_portal.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">badge</span> Staff Portal
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 hover:translate-x-1 transition-transform duration-200 rounded-lg text-sm font-semibold Manrope" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+            </a>
+</nav>
+<div class="mt-auto border-t border-slate-200 dark:border-slate-800 pt-4 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg text-sm font-semibold Manrope" href="#">
+<span class="material-symbols-outlined">help</span> Support
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-error hover:bg-error-container/20 rounded-lg text-sm font-semibold Manrope" href="./home_page.html">
+<span class="material-symbols-outlined">logout</span> Logout
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen p-8">
+<!-- Header Section -->
+<header class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-4xl font-extrabold tracking-tight text-primary mb-2 headline-lg">Receptionist Fast-Track</h2>
+<p class="text-on-surface-variant body-md">Direct walk-in portal for instant asset allocation.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 bg-surface-container-high text-primary font-semibold rounded-lg hover:bg-surface-container-highest transition-colors flex items-center gap-2" onclick="window.location.href='./booking_history.html'">
+<span class="material-symbols-outlined">history</span> Recent Transactions
+                </button>
+<button class="px-6 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-lg shadow-md active:scale-95 transition-transform flex items-center gap-2" onclick="window.location.href='./booking_page.html'">
+<span class="material-symbols-outlined">add_circle</span> New Member
+                </button>
+</div>
+</header>
+<!-- Bento Grid Layout for Staff Actions -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Quick Client Search (Column 1-5) -->
+<section class="col-span-12 lg:col-span-5 flex flex-col gap-6">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/15">
+<h3 class="text-xl font-bold text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined">person_search</span> 1. Identify Client
+                    </h3>
+<div class="relative mb-6">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-white transition-all text-lg" placeholder="Search by name, email, or member ID..." type="text"/>
+</div>
+<div class="space-y-4">
+<p class="text-xs font-bold uppercase tracking-widest text-outline">Recent Arrivals</p>
+<!-- Client Card -->
+<div class="flex items-center justify-between p-4 rounded-lg bg-surface-container-low hover:bg-primary-fixed/30 cursor-pointer transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-300 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a male professional client with a friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFvouRAd3rBkyeJFeLzo03JszWjsEvaZ88PXeKF3oPByHXADk9SAerdg9kkOOZQ_1CY6JkmMUnl7OgyXDpBtiTRrc3nQvtmyv-OEWEmw3HmtPcY_slX6b4KeNlAImBJu0DXVjFg2dD8Jjl6x6O6xEeM8TgaqcT8ektDRVQHxn_UEH39SRO6RnhZc62frae9EGD5v-o1XEJn5bksijnHteHDlECS0jH3rLyvzHyFJhrmfFpXrsH9Sr8twfxveDydxmvBx6riyBtlc8"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Julian Vane</p>
+<p class="text-xs text-on-surface-variant">julian.v@architecture.com</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-4 rounded-lg bg-surface-container-low hover:bg-primary-fixed/30 cursor-pointer transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-300 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close up headshot of a female entrepreneur looking professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKx2lH_f85KsBdIcuk5NzFWdQ227G6bXERTQgq6H1AIt_BvpWWAr50LJq5X_lLsgkTlLdlrBdHLscOsDEljdfcGgDJ_kxITAR_Ty_Gg_3CxTO00Xtuq4tz940uHh-C1dhYpti6seWFcqxiazhDVy303FdK3mgG88-S3RtFBXZKK5ntdmwXEgllHvGR4UNkuQHQZgU9UM9roLZTj7ofsq5ypTAssnLw9HbhBAYYHiny9wwT_QmD6WNVd5_UG0vk6udEPz6IRu99u_U"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Elena Rodriguez</p>
+<p class="text-xs text-on-surface-variant">elena.rod@studio-blue.io</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Fast Booking Summary (Status) -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/15">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold text-primary">Booking Draft</h3>
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold uppercase rounded-full">Pending</span>
+</div>
+<div class="space-y-3 body-md text-on-surface-variant">
+<div class="flex justify-between">
+<span>Client:</span>
+<span class="font-bold text-on-surface">—</span>
+</div>
+<div class="flex justify-between">
+<span>Room:</span>
+<span class="font-bold text-on-surface">—</span>
+</div>
+<div class="flex justify-between">
+<span>Duration:</span>
+<span class="font-bold text-on-surface">2 Hours (Standard)</span>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex justify-between items-end">
+<span class="text-sm">Total Due:</span>
+<span class="text-2xl font-extrabold text-primary">$0.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Room Availability Grid (Column 6-12) -->
+<section class="col-span-12 lg:col-span-7 bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/15">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-xl font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined">grid_view</span> 2. Select Asset
+                    </h3>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg text-xs font-bold">All</button>
+<button class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-lg text-xs font-bold">Desks</button>
+<button class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-lg text-xs font-bold">Suites</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<!-- Room Card 1: Occupied -->
+<div class="p-4 rounded-lg bg-surface-container border border-outline-variant/10 opacity-60 flex flex-col gap-3 relative overflow-hidden">
+<div class="flex justify-between items-start">
+<span class="p-2 bg-surface-container-highest rounded text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">meeting_room</span>
+</span>
+<span class="text-[10px] font-bold text-tertiary">BUSY</span>
+</div>
+<div>
+<p class="font-bold text-sm">Glass Atelier 01</p>
+<p class="text-xs text-on-surface-variant">Capacity: 4</p>
+</div>
+<!-- Availability Ribbon Mockup -->
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-tertiary w-3/4"></div>
+<div class="h-full bg-primary-fixed-dim w-1/4"></div>
+</div>
+</div>
+<!-- Room Card 2: Available (Selected State) -->
+<div class="p-4 rounded-lg bg-primary-fixed/20 border-2 border-primary flex flex-col gap-3 relative ring-4 ring-primary-fixed/30 scale-105 z-10">
+<div class="flex justify-between items-start">
+<span class="p-2 bg-primary text-on-primary rounded">
+<span class="material-symbols-outlined text-sm">desktop_windows</span>
+</span>
+<span class="text-[10px] font-bold text-primary">SELECT</span>
+</div>
+<div>
+<p class="font-bold text-sm">Focus Pod A12</p>
+<p class="text-xs text-on-surface-variant">Capacity: 1</p>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary w-full"></div>
+</div>
+<div class="absolute -top-2 -right-2 bg-primary text-on-primary rounded-full p-1 shadow-md">
+<span class="material-symbols-outlined text-xs">check</span>
+</div>
+</div>
+<!-- Room Card 3: Available -->
+<div class="p-4 rounded-lg bg-surface-container-low hover:bg-white hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all border border-outline-variant/15 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<span class="p-2 bg-secondary-container text-on-secondary-container rounded">
+<span class="material-symbols-outlined text-sm">corporate_fare</span>
+</span>
+<span class="text-[10px] font-bold text-green-700">FREE</span>
+</div>
+<div>
+<p class="font-bold text-sm">Skyline Suite</p>
+<p class="text-xs text-on-surface-variant">Capacity: 12</p>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary w-1/2"></div>
+</div>
+</div>
+<!-- Card 4: Available -->
+<div class="p-4 rounded-lg bg-surface-container-low hover:bg-white hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all border border-outline-variant/15 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<span class="p-2 bg-surface-container-high text-on-surface-variant rounded">
+<span class="material-symbols-outlined text-sm">meeting_room</span>
+</span>
+<span class="text-[10px] font-bold text-green-700">FREE</span>
+</div>
+<div>
+<p class="font-bold text-sm">Zen Room 04</p>
+<p class="text-xs text-on-surface-variant">Capacity: 2</p>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+</div>
+<!-- Card 5: Available -->
+<div class="p-4 rounded-lg bg-surface-container-low hover:bg-white hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all border border-outline-variant/15 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<span class="p-2 bg-surface-container-high text-on-surface-variant rounded">
+<span class="material-symbols-outlined text-sm">meeting_room</span>
+</span>
+<span class="text-[10px] font-bold text-green-700">FREE</span>
+</div>
+<div>
+<p class="font-bold text-sm">Monolith Hall</p>
+<p class="text-xs text-on-surface-variant">Capacity: 20</p>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary w-1/4"></div>
+</div>
+</div>
+<!-- Card 6: Available -->
+<div class="p-4 rounded-lg bg-surface-container-low hover:bg-white hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all border border-outline-variant/15 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<span class="p-2 bg-surface-container-high text-on-surface-variant rounded">
+<span class="material-symbols-outlined text-sm">desktop_windows</span>
+</span>
+<span class="text-[10px] font-bold text-green-700">FREE</span>
+</div>
+<div>
+<p class="font-bold text-sm">Shared Desk 09</p>
+<p class="text-xs text-on-surface-variant">Capacity: 1</p>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary w-full"></div>
+</div>
+</div>
+</div>
+<!-- Action Bar (Sticky at Bottom of Grid) -->
+<div class="mt-8 pt-8 border-t border-outline-variant/20 grid grid-cols-2 gap-4">
+<button class="flex flex-col items-center justify-center gap-2 p-6 border-2 border-outline-variant/15 rounded-xl hover:border-primary hover:bg-primary/5 transition-all text-on-surface-variant hover:text-primary group">
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">credit_card</span>
+<span class="font-bold text-sm">Card Terminal</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-6 border-2 border-primary bg-primary text-on-primary rounded-xl shadow-lg active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl">payments</span>
+<span class="font-bold text-sm">Cash at Venue</span>
+</button>
+</div>
+</section>
+</div>
+<!-- Footer (Authority: JSON) -->
+<footer class="mt-16 w-full py-12 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-2">
+<p class="text-base font-bold text-slate-800 dark:text-slate-200 mb-4">Architectural Sanctuary</p>
+<p class="text-xs Inter text-slate-500 dark:text-slate-400 max-w-sm">Elevating the co-working experience through silent authority and architectural precision. Designed for the focused professional.</p>
+</div>
+<div class="flex flex-col gap-3">
+<p class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Navigation</p>
+<a class="text-xs Inter text-slate-500 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 fade-in transition-opacity" href="#">Privacy Policy</a>
+<a class="text-xs Inter text-slate-500 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 fade-in transition-opacity" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3">
+<p class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Help Desk</p>
+<a class="text-xs Inter text-slate-500 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 fade-in transition-opacity" href="#">Contact Support</a>
+<a class="text-xs Inter text-slate-500 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 fade-in transition-opacity" href="#">Location Finder</a>
+</div>
+</div>
+<div class="mt-12 px-8 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs Inter text-slate-500 dark:text-slate-400">© 2024 Architectural Sanctuary. All Rights Reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-slate-400 text-sm">language</span>
+<span class="material-symbols-outlined text-slate-400 text-sm">shield</span>
+<span class="material-symbols-outlined text-slate-400 text-sm">verified</span>
+</div>
+</div>
+</footer>
+</main>
+<!-- Floating Booking Ribbon (The Signature Component) -->
+<div class="fixed bottom-8 right-8 z-50">
+<div class="glass-panel p-4 rounded-xl shadow-2xl border border-white/20 flex items-center gap-6 pr-6 animate-slide-in">
+<div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined">confirmation_number</span>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest text-outline">Terminal Active</p>
+<p class="text-sm font-bold text-primary">Station: Reception_Main_01</p>
+</div>
+<div class="h-10 w-px bg-outline-variant/20"></div>
+<div class="flex flex-col items-end">
+<p class="text-[10px] font-bold uppercase text-tertiary">Live Status</p>
+<p class="text-xs font-medium text-on-surface">14 Units Available</p>
+</div>
+</div>
+</div>
+</body></html>

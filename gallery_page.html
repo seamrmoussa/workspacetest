@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery | Architectural Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#eef1f3",
+              "on-primary-container": "#a2c6fd",
+              "error": "#ba1a1a",
+              "background": "#f7fafc",
+              "tertiary-fixed": "#ffdead",
+              "error-container": "#ffdad6",
+              "primary": "#0e3b69",
+              "on-surface-variant": "#43474f",
+              "tertiary": "#4f3500",
+              "surface": "#f7fafc",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "on-background": "#181c1e",
+              "on-tertiary-fixed": "#281900",
+              "on-error": "#ffffff",
+              "inverse-surface": "#2d3133",
+              "outline": "#737780",
+              "surface-dim": "#d7dadc",
+              "secondary-container": "#e1e1c9",
+              "primary-fixed": "#d4e3ff",
+              "surface-bright": "#f7fafc",
+              "outline-variant": "#c3c6d0",
+              "primary-container": "#2c5282",
+              "on-secondary-container": "#636451",
+              "primary-fixed-dim": "#a5c8ff",
+              "on-primary-fixed-variant": "#204877",
+              "surface-container": "#ebeef0",
+              "surface-container-low": "#f1f4f6",
+              "on-tertiary-fixed-variant": "#604100",
+              "surface-tint": "#3b6090",
+              "tertiary-container": "#6d4a00",
+              "on-surface": "#181c1e",
+              "on-secondary": "#ffffff",
+              "surface-container-highest": "#e0e3e5",
+              "on-secondary-fixed": "#1b1d0e",
+              "tertiary-fixed-dim": "#f0be6e",
+              "surface-variant": "#e0e3e5",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#edbc6c",
+              "secondary-fixed-dim": "#c8c8b0",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#474836",
+              "surface-container-high": "#e5e9eb",
+              "secondary-fixed": "#e4e4cc",
+              "inverse-primary": "#a5c8ff",
+              "secondary": "#5e604d",
+              "on-primary-fixed": "#001c3a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .masonry-grid {
+            columns: 1;
+            gap: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid {
+                columns: 2;
+            }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                columns: 3;
+            }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed-variant">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center h-16 px-8 max-w-full mx-auto">
+<div class="text-xl font-bold tracking-tight text-blue-900 dark:text-blue-100 font-headline" onclick="window.location.href='#'">
+                Architectural Sanctuary
+            </div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-900 dark:text-blue-400 border-b-2 border-blue-900 dark:border-blue-400 pb-1 font-medium text-sm" href="./home_page.html">Explore</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-300 transition-colors font-medium text-sm" href="./booking_page.html">Bookings</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-300 transition-colors font-medium text-sm" href="./plans_pricing.html">Plans</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-300 transition-colors font-medium text-sm" href="#">Help</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-slate-200/50 rounded-full transition-colors" onclick="window.location.href='./notifications_system.html'">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-slate-200/50 rounded-full transition-colors" onclick="window.location.href='./authentication.html'">account_circle</button>
+<button class="hidden lg:block bg-primary-container text-on-primary font-semibold px-6 py-2 rounded-lg scale-95 active:scale-90 transition-transform" onclick="window.location.href='./booking_page.html'">Book Now</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Editorial Header -->
+<header class="mb-16 md:flex md:items-end md:justify-between">
+<div class="max-w-2xl">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-primary leading-[0.9] mb-6">
+                    Spatial <br/>Narratives
+                </h1>
+<p class="text-lg text-on-surface-variant font-body leading-relaxed max-w-lg">
+                    A curated visual journey through our meticulously crafted environments, designed for deep focus and collaborative breakthrough.
+                </p>
+</div>
+<div class="mt-8 md:mt-0 flex flex-wrap gap-3">
+<!-- Filters following Design System Buttons -->
+<button class="bg-primary-container text-on-primary px-6 py-2 rounded-lg font-semibold text-sm shadow-sm transition-all">All Spaces</button>
+<button class="bg-surface-container-high text-primary px-6 py-2 rounded-lg font-semibold text-sm hover:translate-x-1 transition-transform">Meeting Rooms</button>
+<button class="bg-surface-container-high text-primary px-6 py-2 rounded-lg font-semibold text-sm hover:translate-x-1 transition-transform">Common Areas</button>
+<button class="bg-surface-container-high text-primary px-6 py-2 rounded-lg font-semibold text-sm hover:translate-x-1 transition-transform">Private Offices</button>
+</div>
+</header>
+<!-- Gallery Grid: Masonry Layout -->
+<div class="masonry-grid">
+<!-- Item 1: Large Featured -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-surface-container-low">
+<img alt="Minimalist Workspace" class="w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern minimalist co-working space with floor-to-ceiling windows, sleek oak tables, and ergonomic chairs in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGRxxuJb5XGUTUqacjE9A472JDS8Vdgp3jMY5IGR7hWaQQXYbVeKpzjmE-Gh6aB_UkJ6UfVIIJaZk47_IjRgzA7k6QBvF-7o0iP1uPJ7Xpi7OKEOWcNGc7qNaSk_6jZ_TmlrRUgx8h_oNuukQW-GP_n0zywOe2Y2ULCOfqKkI6A1nKo2yvZ98RL604xiqfPzK4lqrAyGl6T7ViUiuQ6YM_4PCPCcmcaruKLqMnmttcOLC2AFed_22kLeFdvk7Qc2vw4DWDSTS1gjA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+<span class="text-on-primary font-headline font-bold text-xl">The Atrium Lounge</span>
+<span class="text-on-primary/80 text-sm font-body">Common Area</span>
+</div>
+</div>
+<!-- Item 2: Vertical Orientation -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-surface-container-low">
+<img alt="Private Office" class="w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Elegant private office suite with dark wood paneling, a large monitor setup, and a plush leather chair, moody evening lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyWWDetbezAMjZS4zLsponex6H8FezyMY5Y7WFPHy5NBpV8mUpby4nyZmSyaHWc4NakDqIlkYnbpdgj61DZsg4IRDm74-4R7Hntoct0jzGUa6wBiRE1VM-Fvm075a3TRoDWfTV4uXoLQMqxEX_uZ19YqL8LgZnZC6raqzi14w24iYohKN7e8Pmg-4CNmSHZ4ylpI7IlQ24hGbfECUFHOBUjoZDHIoiFFC2oZ-HdxMbmwFCGnMDd64gW9cP1lOsDBb-_qC789lr8-s"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+<span class="text-on-primary font-headline font-bold text-xl">Executive Suite 402</span>
+<span class="text-on-primary/80 text-sm font-body">Private Offices</span>
+</div>
+</div>
+<!-- Item 3: Wide Layout -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-surface-container-low">
+<img alt="Meeting Room" class="w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Circular meeting room with glass walls, soft recessed lighting, and a state-of-the-art video conferencing screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0LaMc7Iu96HWhjqxpZBSWb2sSLSc2gMOAAx-VNJS5OMIaTIgtIn57_uEUkwW-tSadBkZjPeemVpSdB_wr1zwyN4nkFZkGjOjVUExWpofGhusCEoj45ekl3CDTYjp5VhoiojMm10x6d3yutwW7kToL0N7Axm4-PeFiidqokkS-MKsW3JWSGAV9Nj_f2R0gq9oKsRy86IqX3ZKgS6GdnXq4p8haPD_LrjahuETpzYBxRtVDd8ObV5PYFBq-H4I3W6iU308v30vyRjU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+<span class="text-on-primary font-headline font-bold text-xl">The Glass Rotunda</span>
+<span class="text-on-primary/80 text-sm font-body">Meeting Rooms</span>
+</div>
+</div>
+<!-- Item 4: Detail Shot -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-surface-container-low">
+<img alt="Social Kitchen" class="w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Chic communal kitchen and coffee bar with marble countertops, brass fixtures, and plants hanging from the ceiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDebYqvm-opFjy9kcDZ8wR60OmevLP7v4c2MDJYQpNuy5F5qWLrrJZgkj1umiCaz3Fo8R2NewxhP8keaOhIvVzw-KIz0vbBvh18dRR9nK45HATXXVYHqzuCTl4aKPu1tB5x0Y41Rfa2V08bMh3d6eWxkaTr4_TK2t__XdTaQLuAX3UIgqxT_fbW5-NYuvEKUvvi2YhIRFVMNKqaV_556oeT5O5XBBpjYNxueTryWpLGCTUzBimLdY2HjTEyhmKIONLMaZo2JIwLkiA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+<span class="text-on-primary font-headline font-bold text-xl">Sanctuary Brew Bar</span>
+<span class="text-on-primary/80 text-sm font-body">Common Areas</span>
+</div>
+</div>
+<!-- Item 5: High Contrast -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-surface-container-low">
+<img alt="Library" class="w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Quiet library zone with floor-to-ceiling bookshelves, deep green velvet armchairs, and warm individual reading lamps" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD63qpjidi05Akyf3uePJJyQaHBxrdBkZzZ9cgREPvSlBEaH9eHLroLqwZpPkuRojaksVVvTY2YdQppmAYJgX-NfNVDpTsDmyZ6wNxwzDqmu_HUENpF1inyxdLjWEulKuwU_a64PZKvSVV2BlW0M6dlpvn2dDEP6jKxQFRUUgYXXbvXoxqqa_vGjt3AWlHt3TWf6JScj7OQvcbc2E1_yfR45MDSPgC_8_6CS1Q6yVoNQIpWderZMl-j_ZQ2wfVDzl49Y3HbrXdjB0o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+<span class="text-on-primary font-headline font-bold text-xl">The Silent Library</span>
+<span class="text-on-primary/80 text-sm font-body">Deep Focus Zone</span>
+</div>
+</div>
+<!-- Item 6: Modern Geometric -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-surface-container-low">
+<img alt="Open Desk" class="w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Wide shot of a bustling open-plan workspace with industrial concrete ceilings and warm wood floors, soft afternoon sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2hTjZz2zTKHv8m8y3Bmp6bfEDTPNzH48e0QpFfNCRTtjGivbbBN1c8OWNVzJKmI1DQqA6yvnI8D1mkdFtIRqilF-d67s9FCeyiMv16tu_smprzfvqlwutANH7fKgJqE8R1XervFqqwFf3CnynUyGyC-bMY6qVNRNy_ozYCe9LZFltrxNZtPF3AqN3VxEC40OiMXt_COOl3eHraqd7VQ86eKVYBmr8i3sxGpNAHDpwx9urknQpulkQbrQ2dAfs1M74FH3tBWOPRJc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+<span class="text-on-primary font-headline font-bold text-xl">The Main Floor</span>
+<span class="text-on-primary/80 text-sm font-body">Common Areas</span>
+</div>
+</div>
+</div>
+<!-- CTA Section with Glassmorphism -->
+<section class="mt-24 bg-primary-container rounded-2xl overflow-hidden relative">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;q=80&amp;w=1200')] bg-cover bg-center opacity-20" data-alt="Faded architectural detail of a glass building reflecting blue sky"></div>
+<div class="relative z-10 px-8 py-16 md:py-24 text-center">
+<h2 class="font-headline text-3xl md:text-5xl font-bold text-on-primary mb-6">Ready to experience it in person?</h2>
+<p class="text-on-primary/80 max-w-xl mx-auto mb-10 text-lg">Book a personal tour or reserve your workspace today to find your new center of productivity.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-surface-container-lowest text-primary px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform shadow-lg">Schedule a Tour</button>
+<button class="border-2 border-surface-container-lowest text-on-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-surface-container-lowest/10 transition-colors" onclick="window.location.href='#'">Book a Space</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-base font-bold text-slate-800 dark:text-slate-200 mb-4">Architectural Sanctuary</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-body">Crafting intentional environments for the modern professional. Where silence meets performance.</p>
+</div>
+<div>
+<h4 class="text-sm font-bold text-blue-900 dark:text-blue-400 mb-4 font-headline">Navigation</h4>
+<ul class="space-y-2">
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="./home_page.html">Explore</a></li>
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="./booking_page.html">Bookings</a></li>
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="./plans_pricing.html">Plans</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold text-blue-900 dark:text-blue-400 mb-4 font-headline">Resources</h4>
+<ul class="space-y-2">
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Contact Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold text-blue-900 dark:text-blue-400 mb-4 font-headline">Connect</h4>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary transition-colors">share</span>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary transition-colors">alternate_email</span>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary transition-colors">location_on</span>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center text-[10px] text-slate-400 uppercase tracking-widest border-t border-slate-100 pt-8">
+            © 2024 Architectural Sanctuary. All Rights Reserved.
+        </div>
+</footer>
+</body></html>

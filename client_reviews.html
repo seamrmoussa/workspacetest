@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guest Experiences | Architectural Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#eef1f3",
+              "on-primary-container": "#a2c6fd",
+              "error": "#ba1a1a",
+              "background": "#f7fafc",
+              "tertiary-fixed": "#ffdead",
+              "error-container": "#ffdad6",
+              "primary": "#0e3b69",
+              "on-surface-variant": "#43474f",
+              "tertiary": "#4f3500",
+              "surface": "#f7fafc",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "on-background": "#181c1e",
+              "on-tertiary-fixed": "#281900",
+              "on-error": "#ffffff",
+              "inverse-surface": "#2d3133",
+              "outline": "#737780",
+              "surface-dim": "#d7dadc",
+              "secondary-container": "#e1e1c9",
+              "primary-fixed": "#d4e3ff",
+              "surface-bright": "#f7fafc",
+              "outline-variant": "#c3c6d0",
+              "primary-container": "#2c5282",
+              "on-secondary-container": "#636451",
+              "primary-fixed-dim": "#a5c8ff",
+              "on-primary-fixed-variant": "#204877",
+              "surface-container": "#ebeef0",
+              "surface-container-low": "#f1f4f6",
+              "on-tertiary-fixed-variant": "#604100",
+              "surface-tint": "#3b6090",
+              "tertiary-container": "#6d4a00",
+              "on-surface": "#181c1e",
+              "on-secondary": "#ffffff",
+              "surface-container-highest": "#e0e3e5",
+              "on-secondary-fixed": "#1b1d0e",
+              "tertiary-fixed-dim": "#f0be6e",
+              "surface-variant": "#e0e3e5",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#edbc6c",
+              "secondary-fixed-dim": "#c8c8b0",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#474836",
+              "surface-container-high": "#e5e9eb",
+              "secondary-fixed": "#e4e4cc",
+              "inverse-primary": "#a5c8ff",
+              "secondary": "#5e604d",
+              "on-primary-fixed": "#001c3a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f7fafc;
+        color: #181c1e;
+      }
+      h1, h2, h3 {
+        font-family: 'Manrope', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center h-16 px-8 max-w-full mx-auto">
+<div class="text-xl font-bold tracking-tight text-blue-900 dark:text-blue-100 cursor-pointer" onclick="window.location.href='./home_page.html'">
+                Architectural Sanctuary
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-300 text-sm font-medium Inter transition-colors" href="./home_page.html">Explore</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-300 text-sm font-medium Inter transition-colors" href="./booking_page.html">Bookings</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-300 text-sm font-medium Inter transition-colors" href="./plans_pricing.html">Plans</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-300 text-sm font-medium Inter transition-colors" href="#">Help</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-600 hover:bg-slate-200/50 p-2 rounded-full transition-colors">notifications</button>
+<button class="material-symbols-outlined text-slate-600 hover:bg-slate-200/50 p-2 rounded-full transition-colors">account_circle</button>
+<button class="bg-primary-container text-on-primary px-5 py-2 rounded-lg text-sm font-semibold scale-95 active:scale-90 transition-transform" onclick="window.location.href='./booking_page.html'">Book Now</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-16 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-12">
+<h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter text-primary mb-4">Guest Perspectives</h1>
+<p class="text-lg text-secondary max-w-2xl leading-relaxed">
+                Honest feedback from our community of creators, architects, and visionaries who call our sanctuary home.
+            </p>
+</header>
+<!-- Rating Summary Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16">
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-center items-center text-center shadow-sm">
+<span class="text-6xl font-black text-primary mb-2">4.9</span>
+<div class="flex gap-1 mb-2">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm font-semibold text-secondary">Based on 1,248 reviews</p>
+</div>
+<div class="md:col-span-8 bg-surface-container-low rounded-xl p-8 flex flex-col justify-center shadow-sm">
+<h3 class="text-xl font-bold text-primary mb-6">Review Breakdown</h3>
+<div class="space-y-4">
+<!-- Progress Bars -->
+<div class="flex items-center gap-4">
+<span class="text-xs font-bold w-12 text-on-surface-variant">5 Star</span>
+<div class="flex-1 h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 88%"></div>
+</div>
+<span class="text-xs font-medium w-8 text-on-surface-variant">88%</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-bold w-12 text-on-surface-variant">4 Star</span>
+<div class="flex-1 h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary/60" style="width: 10%"></div>
+</div>
+<span class="text-xs font-medium w-8 text-on-surface-variant">10%</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-bold w-12 text-on-surface-variant">3 Star</span>
+<div class="flex-1 h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary/30" style="width: 2%"></div>
+</div>
+<span class="text-xs font-medium w-8 text-on-surface-variant">2%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Filters & Interaction -->
+<section class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-outline-variant/15 pb-8">
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary text-sm font-semibold shadow-sm">All Reviews</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-primary text-sm font-semibold hover:bg-surface-container-highest transition-colors" onclick="window.location.href='#'">Highest Rated</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-primary text-sm font-semibold hover:bg-surface-container-highest transition-colors" onclick="window.location.href='#'">Most Recent</button>
+</div>
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest border-none ring-1 ring-outline-variant/30 rounded-lg px-4 py-2.5 pr-10 text-sm font-medium text-on-surface focus:ring-primary focus:ring-2 transition-all">
+<option>Filter By Room Type</option>
+<option>Executive Suites</option>
+<option>Open Atriums</option>
+<option>Focus Pods</option>
+<option>The Gallery</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</section>
+<!-- Reviews List -->
+<section class="space-y-8">
+<!-- Review Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:scale-[1.01] transition-transform duration-300">
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/4 flex flex-col items-center md:items-start">
+<img alt="User" class="w-20 h-20 rounded-full object-cover mb-4 ring-4 ring-surface-container-low" data-alt="portrait of a professional man with glasses smiling in a softly lit modern office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhMJOXzTaAmst3rkvft9_lBY9nyKcmIHorSibqmJZhttE1mTgqAYfwqVOnNS2uIVToAOAtEDEVzbQsNYe5H8iW_8Dn5e9MzUk0VsAjhTEqbMKo7SNzabTamObwdwYO4gmo9PalEbZSOfAS4v4qTQRhLlfEcDiDWu75GZ3NRo2ghY_9tKT-Ggq-sr7VNo-z0FCNI0a7em4gxWkpBkyZg44926K95SqghMyL2mIO4k9sUhU_CUVfouQoUe0GFnDGanuJPEqN5xBB_eg"/>
+<h4 class="font-bold text-primary text-lg">Marcus Thorne</h4>
+<p class="text-xs text-on-surface-variant font-medium mb-2">Senior Architect</p>
+<div class="flex gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="md:w-3/4">
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 rounded bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">The Glass Library</span>
+<time class="text-xs text-outline font-medium">October 14, 2023</time>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">"A Masterclass in Focused Design"</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">
+                            The attention to acoustic detail in the Glass Library is unparalleled. As an architect, I'm extremely picky about light quality and sound dampening. The sanctuary delivers a quiet power that allowed me to finish a complex project two days ahead of schedule. The staff treats you like royalty without the fuss.
+                        </p>
+</div>
+</div>
+</article>
+<!-- Review Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:scale-[1.01] transition-transform duration-300">
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/4 flex flex-col items-center md:items-start">
+<img alt="User" class="w-20 h-20 rounded-full object-cover mb-4 ring-4 ring-surface-container-low" data-alt="close up portrait of a young professional woman with a warm friendly expression in an airy bright setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyl2h_ASB4KM6JfwiUvQl-fIll6oOHTmki0JRWb5Vy2ImPSyFvJ3FBdMGpSvTSHdioEckjdxIaDB48755p7ukppG2BwI79C34prWjPq_nITpEWunihvQBvOauRcW5d86s15l-FPUi8_qQ8FhiVRTcpIR6Km4TEl0ovsTKrd5vkPyQLywvNzhuPMbdSA1-K6mem6BaGOjVhaGsuPDqXhavLJKHWEPDKfQ9E8Je2ssrNx-jDuKKmPs5n4A_KGotXspqbRfDCRPtonPU"/>
+<h4 class="font-bold text-primary text-lg">Elena Rodriguez</h4>
+<p class="text-xs text-on-surface-variant font-medium mb-2">Creative Director</p>
+<div class="flex gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="md:w-3/4">
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 rounded bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Zen Atrium</span>
+<time class="text-xs text-outline font-medium">September 28, 2023</time>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">"Inspiration in Every Corner"</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">
+                            I came here for a brand strategy retreat and left with more clarity than I've had in years. The organic textures of the Secondary Beige palette and the abundance of plants in the Atrium make it feel less like an office and more like a high-end wellness retreat. Truly a sanctuary for the mind.
+                        </p>
+</div>
+</div>
+</article>
+<!-- Review Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:scale-[1.01] transition-transform duration-300">
+<div class="flex flex-col md:flex-row gap-8">
+<div class="md:w-1/4 flex flex-col items-center md:items-start">
+<img alt="User" class="w-20 h-20 rounded-full object-cover mb-4 ring-4 ring-surface-container-low" data-alt="portrait of a man with a beard looking thoughtful in a warm indoor setting with wooden textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIeiROJ3bpHpEnrC1-zRVqEXvRtpL9Pgeb1J52Ky0sN-vEA9DL3saa5VT14zFk29qVFaNH7Jew13f_0As-9UNPpGauK-F2_wpMAeEBxBQToGbemeOJXkl_tGHgDM54RMJXgmeXMb0VN7RcA-FOGEShhCi9aiadXd6M4MHAd6UcNjYuWLMsCTWRjUzBPbki0oh1DGARiRgZWnfTLBd8J5PlpAv_7s2ivKxJHuA5KyJwLw9qo1SGchh6tyKKnGSILaLSWekYsZo1QKg"/>
+<h4 class="font-bold text-primary text-lg">Julian Chen</h4>
+<p class="text-xs text-on-surface-variant font-medium mb-2">Tech Founder</p>
+<div class="flex gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+</div>
+<div class="md:w-3/4">
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 rounded bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Executive Suite 04</span>
+<time class="text-xs text-outline font-medium">August 12, 2023</time>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">"Flawless Technology Integration"</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">
+                            Most coworking spaces struggle with the tech basics. Architectural Sanctuary has fiber speeds that never dip and seamless screen sharing that actually works on the first try. The minimalist UI of their booking system matches the physical space—sophisticated and low-friction.
+                        </p>
+</div>
+</div>
+</article>
+</section>
+<!-- Pagination -->
+<div class="mt-16 flex justify-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant/30 text-primary hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant/30 text-primary hover:bg-surface-container-high transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant/30 text-primary hover:bg-surface-container-high transition-colors">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant/30 text-primary hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-200 dark:border-slate-800 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+<div class="flex flex-col gap-4">
+<span class="text-base font-bold text-slate-800 dark:text-slate-200">Architectural Sanctuary</span>
+<p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Defining the future of workspace aesthetics and productivity through thoughtful design and curated experiences.</p>
+</div>
+<div>
+<h5 class="text-sm font-bold text-primary mb-4">Discover</h5>
+<ul class="space-y-2">
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Location Finder</a></li>
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Membership Plans</a></li>
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Event Spaces</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-sm font-bold text-primary mb-4">Support</h5>
+<ul class="space-y-2">
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Contact Support</a></li>
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-sm font-bold text-primary mb-4">Social</h5>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary">share</span>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary">mail</span>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center border-t border-slate-100 dark:border-slate-900 pt-8">
+<p class="text-xs text-slate-500 dark:text-slate-400">© 2024 Architectural Sanctuary. All Rights Reserved.</p>
+</div>
+</footer>
+</body></html>

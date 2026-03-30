@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Architectural Sanctuary | Plans &amp; Pricing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#eef1f3",
+              "on-primary-container": "#a2c6fd",
+              "error": "#ba1a1a",
+              "background": "#f7fafc",
+              "tertiary-fixed": "#ffdead",
+              "error-container": "#ffdad6",
+              "primary": "#0e3b69",
+              "on-surface-variant": "#43474f",
+              "tertiary": "#4f3500",
+              "surface": "#f7fafc",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "on-background": "#181c1e",
+              "on-tertiary-fixed": "#281900",
+              "on-error": "#ffffff",
+              "inverse-surface": "#2d3133",
+              "outline": "#737780",
+              "surface-dim": "#d7dadc",
+              "secondary-container": "#e1e1c9",
+              "primary-fixed": "#d4e3ff",
+              "surface-bright": "#f7fafc",
+              "outline-variant": "#c3c6d0",
+              "primary-container": "#2c5282",
+              "on-secondary-container": "#636451",
+              "primary-fixed-dim": "#a5c8ff",
+              "on-primary-fixed-variant": "#204877",
+              "surface-container": "#ebeef0",
+              "surface-container-low": "#f1f4f6",
+              "on-tertiary-fixed-variant": "#604100",
+              "surface-tint": "#3b6090",
+              "tertiary-container": "#6d4a00",
+              "on-surface": "#181c1e",
+              "on-secondary": "#ffffff",
+              "surface-container-highest": "#e0e3e5",
+              "on-secondary-fixed": "#1b1d0e",
+              "tertiary-fixed-dim": "#f0be6e",
+              "surface-variant": "#e0e3e5",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#edbc6c",
+              "secondary-fixed-dim": "#c8c8b0",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#474836",
+              "surface-container-high": "#e5e9eb",
+              "secondary-fixed": "#e4e4cc",
+              "inverse-primary": "#a5c8ff",
+              "secondary": "#5e604d",
+              "on-primary-fixed": "#001c3a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .display-lg { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #0e3b69 0%, #2c5282 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center h-16 px-8 max-w-full mx-auto">
+<a class="text-xl font-bold tracking-tight text-blue-900 dark:text-blue-100" href="./home_page.html">Architectural Sanctuary</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-300 font-medium text-sm Inter" href="./home_page.html">Explore</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-300 font-medium text-sm Inter" href="./booking_page.html">Bookings</a>
+<a class="text-blue-900 dark:text-blue-400 border-b-2 border-blue-900 dark:border-blue-400 pb-1 font-medium text-sm Inter" href="./plans_pricing.html">Plans</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-300 font-medium text-sm Inter" href="#">Help</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-600 p-2 hover:bg-slate-200/50 rounded-full transition-colors">notifications</button>
+<button class="material-symbols-outlined text-slate-600 p-2 hover:bg-slate-200/50 rounded-full transition-colors">account_circle</button>
+<a class="primary-gradient text-white px-6 py-2 rounded-lg font-semibold text-sm scale-95 active:scale-90 transition-transform inline-block text-center" href="./booking_page.html">Book Now</a>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section / Editorial Header -->
+<header class="mb-20 max-w-3xl">
+<span class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 block">Membership Tiers</span>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-primary leading-tight mb-8">
+                Spaces designed for deep work.
+            </h1>
+<p class="text-lg text-on-surface-variant leading-relaxed font-body">
+                Choose a plan that fits your rhythm. From occasional visitors to dedicated residents, our tiers offer the sanctuary you need to excel.
+            </p>
+</header>
+<!-- Pricing Toggle & Promotion -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
+<div class="flex items-center p-1 bg-surface-container-low rounded-xl w-fit">
+<button class="px-6 py-2 bg-white shadow-sm rounded-lg font-semibold text-sm text-primary">Monthly</button>
+<button class="px-6 py-2 rounded-lg font-semibold text-sm text-on-surface-variant hover:text-primary transition-colors">Yearly (Save 20%)</button>
+</div>
+<div class="bg-tertiary-fixed text-on-tertiary-fixed px-6 py-4 rounded-xl flex items-center gap-4 shadow-sm">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<div>
+<p class="text-sm font-bold">Limited Offer: Summer Residency</p>
+<p class="text-xs opacity-80">Get 15% off any yearly plan with code SUMMER24</p>
+</div>
+</div>
+</div>
+<!-- Pricing Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Basic Plan -->
+<div class="bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
+<div>
+<h3 class="text-2xl font-bold mb-2">Essential</h3>
+<p class="text-on-surface-variant text-sm mb-8">Perfect for freelancers needing a quiet home base away from home.</p>
+<div class="flex items-baseline mb-10">
+<span class="text-4xl font-extrabold text-primary">$149</span>
+<span class="text-on-surface-variant text-sm ml-2">/month</span>
+</div>
+<ul class="space-y-6">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm font-medium">10 days per month access</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm font-medium">High-speed Wi-Fi (Fiber)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm font-medium">Coffee &amp; Tea (Unlimited)</span>
+</li>
+<li class="flex items-start gap-3 text-on-surface-variant opacity-40">
+<span class="material-symbols-outlined text-xl">cancel</span>
+<span class="text-sm font-medium">Meeting room credits</span>
+</li>
+</ul>
+</div>
+<a class="mt-12 w-full py-4 bg-surface-container-high text-primary rounded-lg font-bold hover:bg-surface-container-highest transition-colors inline-block text-center" href="./plans_pricing.html">Choose Plan</a>
+</div>
+<!-- Pro Plan (Highlighted) -->
+<div class="relative bg-white p-10 rounded-xl flex flex-col justify-between shadow-xl ring-2 ring-primary scale-105 z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Most Popular</div>
+<div>
+<h3 class="text-2xl font-bold mb-2">Resident</h3>
+<p class="text-on-surface-variant text-sm mb-8">For dedicated professionals who need full-time sanctuary access.</p>
+<div class="flex items-baseline mb-10">
+<span class="text-4xl font-extrabold text-primary">$399</span>
+<span class="text-on-surface-variant text-sm ml-2">/month</span>
+</div>
+<ul class="space-y-6">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm font-medium">Unlimited 24/7 Access</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm font-medium">Dedicated High-speed Wi-Fi</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm font-medium">Coffee &amp; Tea (Premium Blend)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm font-medium">10 Meeting room credits</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm font-medium">Mailing Address Service</span>
+</li>
+</ul>
+</div>
+<a class="mt-12 w-full py-4 bg-surface-container-high text-primary rounded-lg font-bold hover:bg-surface-container-highest transition-colors inline-block text-center" href="./plans_pricing.html">Choose Plan</a>
+</div>
+<!-- Enterprise Plan -->
+<div class="bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
+<div>
+<h3 class="text-2xl font-bold mb-2">Atelier</h3>
+<p class="text-on-surface-variant text-sm mb-8">Custom suites for growing teams and design studios.</p>
+<div class="flex items-baseline mb-10">
+<span class="text-4xl font-extrabold text-primary">$1,200</span>
+<span class="text-on-surface-variant text-sm ml-2">/month</span>
+</div>
+<ul class="space-y-6">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm font-medium">Private Studio space</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm font-medium">Custom Network config</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm font-medium">Priority Meeting access</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm font-medium">Dedicated Concierge</span>
+</li>
+</ul>
+</div>
+<a class="mt-12 w-full py-4 bg-surface-container-high text-primary rounded-lg font-bold hover:bg-surface-container-highest transition-colors inline-block text-center" href="#">Contact Sales</a>
+</div>
+</div>
+<!-- Asymmetric Detail Section -->
+<section class="mt-32 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative rounded-2xl overflow-hidden aspect-[4/3]">
+<img alt="Minimalist architectural office space" class="object-cover w-full h-full" data-alt="Modern minimalist office interior with floor-to-ceiling windows, sculptural furniture, and soft natural morning light filtering through" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3yOc08AkbzUII-B5u4j_L4tAPwutK_CyKyLIKUXFgKLX6Tqa17I1Bp5RSyrqEni76XmPxvwfbGnmQDRzn9QyFUm2NhTJnvpvujTEeCCMsaUQcTZk6mDGzaBCx2TtNBpLLSnxMkfDUkiiunHCeHyoqDdhPu-_EG7IuZ8P7iIr1-v3ulRyNu9Qguzgz1RDMQbz3AMgeVS5UMGdvzbDx4eQCf5qW6exP3PmcFWDI5pXa2ylmnWTNH8sVHO2JDZ40_H1OMExOYC0j-BQ"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+</div>
+<div>
+<h2 class="text-4xl font-extrabold text-primary mb-6 leading-tight">The Sanctuary Standard</h2>
+<p class="text-on-surface-variant mb-10 leading-relaxed">
+                    Every membership, regardless of tier, includes access to our signature wellness pods, ergonomic furniture by Herman Miller, and biophilic-designed breakout zones.
+                </p>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+<h4 class="font-bold text-sm">Focus First</h4>
+<p class="text-xs text-on-surface-variant">Acoustically treated quiet zones for deep work.</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+<h4 class="font-bold text-sm">Sustainable</h4>
+<p class="text-xs text-on-surface-variant">Zero-waste pantry and solar-powered facilities.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+<div class="flex flex-col gap-4">
+<span class="text-base font-bold text-slate-800 dark:text-slate-200">Architectural Sanctuary</span>
+<p class="text-xs text-slate-500 dark:text-slate-400">Curated spaces for the modern intellectual. Quiet. Precise. Inspiring.</p>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="text-xs font-bold uppercase tracking-widest text-primary">Explore</h5>
+<a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Locations</a>
+<a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Amenities</a>
+<a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Meeting Rooms</a>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="text-xs font-bold uppercase tracking-widest text-primary">Support</h5>
+<a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Terms of Service</a>
+<a class="text-xs text-slate-500 hover:text-blue-900 transition-colors" href="#">Contact Support</a>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="text-xs font-bold uppercase tracking-widest text-primary">Subscribe</h5>
+<div class="flex border border-outline-variant/30 rounded-lg overflow-hidden">
+<input class="bg-transparent border-none text-xs px-3 focus:ring-0 w-full" placeholder="Email" type="email"/>
+<button class="bg-primary text-white p-2">
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-xs text-slate-500">© 2024 Architectural Sanctuary. All Rights Reserved.</p>
+</div>
+</footer>
+</body></html>
